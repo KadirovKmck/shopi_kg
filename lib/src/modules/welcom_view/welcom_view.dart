@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shopi_kg/src/modules/authification/sing_in_view.dart';
+import 'package:shopi_kg/src/modules/modules.dart';
 import 'package:shopi_kg/src/theme/colors.dart';
 
 class WelcomView extends StatelessWidget {
@@ -9,7 +11,7 @@ class WelcomView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Container(
               width: 140,
@@ -35,7 +37,7 @@ class WelcomView extends StatelessWidget {
               height: 30,
             ),
             const Text(
-              'Kadir Kg',
+              'Al Kadir',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Color(0xFF202020),
@@ -44,7 +46,7 @@ class WelcomView extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 50,
             ),
             const Padding(
               padding: EdgeInsets.only(left: 25),
@@ -62,10 +64,15 @@ class WelcomView extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 106,
+              height: 115,
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SingUpView()));
+              },
               child: Container(
                 width: 335,
                 height: 61,
@@ -109,7 +116,12 @@ class WelcomView extends StatelessWidget {
                   width: 15,
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SingInView()));
+                  },
                   child: Container(
                     width: 30,
                     height: 30,
@@ -125,6 +137,9 @@ class WelcomView extends StatelessWidget {
                   ),
                 )
               ],
+            ),
+            const SizedBox(
+              height: 55,
             )
           ],
         ),
