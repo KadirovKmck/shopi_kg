@@ -77,7 +77,7 @@ class WelcomView extends StatelessWidget {
                 width: 335,
                 height: 61,
                 decoration: ShapeDecoration(
-                  color: AppColors.orenge,
+                  color: AppColors.blue,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),
@@ -127,7 +127,7 @@ class WelcomView extends StatelessWidget {
                     height: 30,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
-                      color: AppColors.orenge,
+                      color: AppColors.blue,
                     ),
                     child: const Icon(
                       Icons.arrow_right_alt,
