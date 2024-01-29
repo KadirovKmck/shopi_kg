@@ -24,7 +24,10 @@ class SingUpView extends StatelessWidget {
                 height: 50,
               ),
               Padding(
-                padding: EdgeInsets.only(left: 30),
+                padding: EdgeInsets.only(
+                  left: 30,
+                  right: 30,
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -52,7 +55,7 @@ class SingUpView extends StatelessWidget {
                       height: 32,
                     ),
                     Text(
-                      'Email​ Address',
+                      'Номер Телефона',
                       style: TextStyle(
                         color: Color(0xFF00004D),
                         fontSize: 14,
@@ -61,7 +64,29 @@ class SingUpView extends StatelessWidget {
                         height: 0,
                       ),
                     ),
-                    TetxFildWidget()
+                    SizedBox(
+                      height: 14,
+                    ),
+                    TetxFildWidget(icons: Icons.phone),
+                    SizedBox(
+                      height: 32,
+                    ),
+                    Text(
+                      'Выведите ваш пароль',
+                      style: TextStyle(
+                        color: Color(0xFF00004D),
+                        fontSize: 14,
+                        fontFamily: 'Manrope',
+                        fontWeight: FontWeight.w600,
+                        height: 0,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 14,
+                    ),
+                    TetxFildWidget(
+                      icons: Icons.lock,
+                    )
                   ],
                 ),
               ),
@@ -74,7 +99,8 @@ class SingUpView extends StatelessWidget {
 }
 
 class TetxFildWidget extends StatefulWidget {
-  const TetxFildWidget({super.key});
+  const TetxFildWidget({super.key, required this.icons});
+  final IconData? icons;
 
   @override
   State<TetxFildWidget> createState() => _TetxFildWidgetState();
@@ -82,6 +108,7 @@ class TetxFildWidget extends StatefulWidget {
 
 class _TetxFildWidgetState extends State<TetxFildWidget> {
   final TextEditingController controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -92,10 +119,10 @@ class _TetxFildWidgetState extends State<TetxFildWidget> {
       decoration: InputDecoration(
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: const BorderSide(color: Colors.white)),
+            borderSide: const BorderSide(color: Colors.black)),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: const BorderSide(color: Colors.white)),
+            borderSide: const BorderSide(color: Colors.black)),
         hintText: 'Номер телефона',
         hintStyle: const TextStyle(
             color: Color(0xff677294),
@@ -106,16 +133,10 @@ class _TetxFildWidgetState extends State<TetxFildWidget> {
         filled: true,
         prefixText: '+996 ',
         prefixStyle: const TextStyle(color: Colors.black, fontSize: 15),
-        prefixIcon: const Icon(
-          Icons.phone,
-          color: Color(0xFf677294),
+        prefixIcon: Icon(
+          widget.icons,
+          color: const Color(0xFf677294),
         ),
-        suffixIcon: IconButton(
-            onPressed: () {
-              controller.clear();
-              FocusScope.of(context).unfocus();
-            },
-            icon: const Icon(Icons.close, color: Color(0xff677294))),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(5),
           borderSide: const BorderSide(
