@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopi_kg/src/components/componets.dart';
 import 'package:shopi_kg/src/modules/modules.dart';
 
 class SingInView extends StatefulWidget {
@@ -145,7 +146,7 @@ class _SingInViewState extends State<SingInView> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const HomeView(),
+                              builder: (context) => const NavbarPage(),
                             ),
                           );
                         },

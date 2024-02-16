@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shopi_kg/src/modules/modules.dart';
 
@@ -10,11 +9,11 @@ class NavbarPage extends StatefulWidget {
 }
 
 class _NavbarPageState extends State<NavbarPage> {
-  int _selectedIndex = 0;
+  int selectedIndex = 0;
 
   void _onItemTapped(int index) {
     setState(() {
-      _selectedIndex = index;
+      selectedIndex = index;
     });
   }
 
@@ -27,7 +26,7 @@ class _NavbarPageState extends State<NavbarPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _screens[_selectedIndex],
+      body: _screens[selectedIndex],
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
@@ -35,49 +34,69 @@ class _NavbarPageState extends State<NavbarPage> {
         foregroundColor: const Color.fromARGB(255, 255, 255, 255),
         elevation: 0,
         shape: const CircleBorder(),
-        child: const Column(
-          children: [
-            Icon(Icons.add),
-          ],
+        child: const Icon(
+          Icons.add,
+          size: 35,
         ),
       ),
       bottomNavigationBar: BottomAppBar(
         notchMargin: 5.0,
         shape: const CircularNotchedRectangle(),
-        color: const Color.fromARGB(221, 88, 185, 255),
+        shadowColor: Colors.black,
+        surfaceTintColor: Colors.white,
+        color: Colors.white,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           mainAxisSize: MainAxisSize.max,
           children: [
             IconButton(
-              onPressed: () => _onItemTapped(0),
-              icon: const Icon(
+              onPressed: () {
+                _onItemTapped(0);
+              },
+              icon: Icon(
                 Icons.home,
-                color: Colors.white,
+                size: 35,
+                color:
+                    selectedIndex == 0 ? Colors.blue : const Color(0xffA2A9BD),
               ),
               tooltip: 'Home',
             ),
             IconButton(
-              onPressed: () => _onItemTapped(2),
-              icon: const Icon(
+              onPressed: () {
+                _onItemTapped(2);
+              },
+              icon: Icon(
                 Icons.favorite,
-                color: Colors.white,
+                size: 35,
+                color:
+                    selectedIndex == 2 ? Colors.blue : const Color(0xffA2A9BD),
               ),
               tooltip: 'Favorite',
             ),
+            const Text(
+              'Продать',
+              style: TextStyle(
+                fontSize: 17,
+                color: Color(0xffA2A9BD),
+              ),
+            ),
             IconButton(
               onPressed: () => _onItemTapped(1),
-              icon: const Icon(
+              icon: Icon(
                 Icons.email,
-                color: Colors.white,
+                size: 35,
+                color:
+                    selectedIndex == 1 ? Colors.blue : const Color(0xffA2A9BD),
               ),
               tooltip: 'Chat',
             ),
             IconButton(
               onPressed: () => _onItemTapped(3),
-              icon: const Icon(
+              icon: Icon(
                 Icons.person,
-                color: Colors.white,
+                size: 35,
+                color:
+                    selectedIndex == 3 ? Colors.blue : const Color(0xffA2A9BD),
               ),
               tooltip: 'Profile',
             ),

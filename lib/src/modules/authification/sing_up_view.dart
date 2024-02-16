@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shopi_kg/src/modules/home/home_view.dart';
+import 'package:shopi_kg/src/components/componets.dart';
 
 class SingUpView extends StatefulWidget {
   const SingUpView({Key? key}) : super(key: key);
@@ -147,7 +147,7 @@ class _SingUpViewState extends State<SingUpView> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const HomeView(),
+                              builder: (context) => const NavbarPage(),
                             ),
                           );
                         },
