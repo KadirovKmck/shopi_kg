@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shopi_kg/src/modules/authification/sing_in_view.dart';
 import 'package:shopi_kg/src/modules/modules.dart';
 import 'package:shopi_kg/src/theme/colors.dart';
 
