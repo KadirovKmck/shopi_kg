@@ -40,6 +40,7 @@ class _NavbarPageState extends State<NavbarPage> {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
+        elevation: 100,
         notchMargin: 5.0,
         shape: const CircularNotchedRectangle(),
         shadowColor: Colors.black,
@@ -63,13 +64,13 @@ class _NavbarPageState extends State<NavbarPage> {
             ),
             IconButton(
               onPressed: () {
-                _onItemTapped(2);
+                _onItemTapped(1);
               },
               icon: Icon(
                 Icons.favorite,
                 size: 35,
                 color:
-                    selectedIndex == 2 ? Colors.blue : const Color(0xffA2A9BD),
+                    selectedIndex == 1 ? Colors.blue : const Color(0xffA2A9BD),
               ),
               tooltip: 'Favorite',
             ),
@@ -81,12 +82,12 @@ class _NavbarPageState extends State<NavbarPage> {
               ),
             ),
             IconButton(
-              onPressed: () => _onItemTapped(1),
+              onPressed: () => _onItemTapped(2),
               icon: Icon(
                 Icons.email,
                 size: 35,
                 color:
-                    selectedIndex == 1 ? Colors.blue : const Color(0xffA2A9BD),
+                    selectedIndex == 2 ? Colors.blue : const Color(0xffA2A9BD),
               ),
               tooltip: 'Chat',
             ),
