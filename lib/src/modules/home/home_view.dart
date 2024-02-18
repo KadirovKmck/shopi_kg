@@ -9,14 +9,6 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  List<String> frequency = [
-    'Транспорт',
-    'Недвижимость',
-    'Дом и сад',
-    'Недвижимость',
-    'Техника и электроника ',
-    'Личные вещи ',
-  ];
   int frequencyTapsChages = 0;
 
   @override
@@ -48,11 +40,14 @@ class _HomeViewState extends State<HomeView> {
                 height: 20,
               ),
               Text(
-                'Popular products',
+                'Каталог',
                 style: TextStyle(
                   fontSize: 17,
                   fontWeight: FontWeight.bold,
                 ),
+              ),
+              SizedBox(
+                height: 15,
               ),
               PopularProduktsWidget(),
             ],
