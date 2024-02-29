@@ -7,7 +7,7 @@ class AppView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomeView(),
+      home: WelcomView(),
       debugShowCheckedModeBanner: false,
     );
   }
