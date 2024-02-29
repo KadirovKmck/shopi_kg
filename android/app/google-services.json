@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "444245300519",
+    "project_id": "al-kodir-shop",
+    "storage_bucket": "al-kodir-shop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444245300519:android:b1a556529e60c45273c502",
+        "android_client_info": {
+          "package_name": "com.example.shopi_kg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFYt1l-0sCl9t2UQf8Fz1vR5Y0WeSaDcE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
